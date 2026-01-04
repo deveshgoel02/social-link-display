@@ -57,6 +57,20 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Custom colors
+        navy: {
+          dark: "hsl(var(--navy-dark))",
+          darker: "hsl(var(--navy-darker))",
+        },
+        teal: {
+          DEFAULT: "hsl(var(--teal))",
+          light: "hsl(var(--teal-light))",
+        },
+        "blue-section": "hsl(var(--blue-section))",
+        youtube: {
+          DEFAULT: "hsl(var(--youtube))",
+          hover: "hsl(var(--youtube-hover))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -84,6 +98,9 @@ export default {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+      },
+      fontFamily: {
+        sans: ["Inter", "system-ui", "sans-serif"],
       },
     },
   },
