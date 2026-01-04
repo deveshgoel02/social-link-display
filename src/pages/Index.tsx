@@ -1,48 +1,69 @@
-import heroImage from "@/assets/hero-machine.png";
-
-const Index = () => {
+export default function Index() {
   return (
-    <div className="h-screen w-full relative overflow-hidden">
-      {/* Full hero background image */}
-      <img
-        src={heroImage}
-        alt="Paper Machinery Corporation - Model Machine"
-        className="absolute inset-0 w-full h-full object-cover"
-      />
-      
-      {/* Clickable social icons overlay - positioned over image icons */}
-      <div className="absolute top-[4%] right-[4%] z-20 flex items-center gap-6">
+    <div
+      className="relative min-h-screen bg-cover bg-center"
+      style={{
+        backgroundImage:
+          "url('https://go.demo.pardot.com/l/328763/2026-01-04/33wxbp/328763/1767553153lwWYM1NZ/Gemini_Generated_Image_wchboywchboywchb_clean.png')",
+      }}
+    >
+      {/* Dark overlay for contrast */}
+      <div className="absolute inset-0 bg-black/60" />
+
+      {/* Social Icons */}
+      <div className="absolute top-6 right-6 z-20 flex gap-4">
         <a
-          href="https://facebook.com"
+          href="https://www.facebook.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-10 h-10 cursor-pointer hover:opacity-80 transition-opacity"
-          aria-label="Facebook"
-        />
+        >
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/733/733547.png"
+            alt="Facebook"
+            className="w-8 h-8 hover:scale-110 transition"
+          />
+        </a>
+
         <a
-          href="https://linkedin.com"
+          href="https://www.linkedin.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-10 h-10 cursor-pointer hover:opacity-80 transition-opacity"
-          aria-label="LinkedIn"
-        />
+        >
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/733/733561.png"
+            alt="LinkedIn"
+            className="w-8 h-8 hover:scale-110 transition"
+          />
+        </a>
+
         <a
-          href="https://youtube.com"
+          href="https://www.youtube.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-16 h-10 cursor-pointer hover:opacity-80 transition-opacity"
-          aria-label="YouTube"
-        />
+        >
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/733/733646.png"
+            alt="YouTube"
+            className="w-8 h-8 hover:scale-110 transition"
+          />
+        </a>
       </div>
 
-      {/* Clickable Read More button overlay */}
-      <a
-        href="#products"
-        className="absolute top-[52%] left-[4%] w-28 h-10 z-20 cursor-pointer hover:opacity-80 transition-opacity"
-        aria-label="Read More"
-      />
+      {/* Content */}
+      <div className="relative z-10 max-w-6xl px-6 py-32 text-white">
+        <h1 className="text-4xl md:text-6xl font-bold">
+          MODEL <span className="text-sky-400">MACHINE</span>
+        </h1>
+
+        <p className="mt-6 max-w-xl text-lg text-gray-200">
+          High-performance industrial machinery engineered for precision,
+          efficiency, and reliability.
+        </p>
+
+        <button className="mt-8 rounded bg-sky-500 px-6 py-3 font-semibold text-white hover:bg-sky-600 transition">
+          Read More
+        </button>
+      </div>
     </div>
   );
-};
-
-export default Index;
+}
