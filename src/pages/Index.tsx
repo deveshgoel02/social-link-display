@@ -1,69 +1,75 @@
-export default function Index() {
-  return (
-    <div
-      className="relative min-h-screen bg-cover bg-center"
-      style={{
-        backgroundImage:
-          "url('https://go.demo.pardot.com/l/328763/2026-01-04/33wxbp/328763/1767553153lwWYM1NZ/Gemini_Generated_Image_wchboywchboywchb_clean.png')",
-      }}
-    >
-      {/* Dark overlay for contrast */}
-      <div className="absolute inset-0 bg-black/60" />
+import heroImage from "@/assets/hero-machine.png";
 
-      {/* Social Icons */}
-      <div className="absolute top-6 right-6 z-20 flex gap-4">
+const Index = () => {
+  return (
+    <div className="h-screen w-full relative overflow-hidden">
+      {/* Full hero background image */}
+      <img
+        src={heroImage}
+        alt="Paper Machinery Corporation - Model Machine"
+        className="absolute inset-0 w-full h-full object-cover"
+      />
+
+      {/* Dark overlay for visibility */}
+      <div className="absolute inset-0 bg-black/40" />
+
+      {/* Social icons */}
+      <div className="absolute top-[4%] right-[4%] z-20 flex items-center gap-6">
+        {/* Facebook */}
         <a
-          href="https://www.facebook.com"
+          href="https://facebook.com"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Facebook"
+          className="hover:scale-110 transition-transform"
         >
           <img
             src="https://cdn-icons-png.flaticon.com/512/733/733547.png"
             alt="Facebook"
-            className="w-8 h-8 hover:scale-110 transition"
+            className="w-8 h-8"
           />
         </a>
 
+        {/* LinkedIn */}
         <a
-          href="https://www.linkedin.com"
+          href="https://linkedin.com"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="LinkedIn"
+          className="hover:scale-110 transition-transform"
         >
           <img
             src="https://cdn-icons-png.flaticon.com/512/733/733561.png"
             alt="LinkedIn"
-            className="w-8 h-8 hover:scale-110 transition"
+            className="w-8 h-8"
           />
         </a>
 
+        {/* YouTube */}
         <a
-          href="https://www.youtube.com"
+          href="https://youtube.com"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="YouTube"
+          className="hover:scale-110 transition-transform"
         >
           <img
             src="https://cdn-icons-png.flaticon.com/512/733/733646.png"
             alt="YouTube"
-            className="w-8 h-8 hover:scale-110 transition"
+            className="w-8 h-8"
           />
         </a>
       </div>
 
-      {/* Content */}
-      <div className="relative z-10 max-w-6xl px-6 py-32 text-white">
-        <h1 className="text-4xl md:text-6xl font-bold">
-          MODEL <span className="text-sky-400">MACHINE</span>
-        </h1>
-
-        <p className="mt-6 max-w-xl text-lg text-gray-200">
-          High-performance industrial machinery engineered for precision,
-          efficiency, and reliability.
-        </p>
-
-        <button className="mt-8 rounded bg-sky-500 px-6 py-3 font-semibold text-white hover:bg-sky-600 transition">
-          Read More
-        </button>
-      </div>
+      {/* Read More button */}
+      <a
+        href="#products"
+        className="absolute top-[52%] left-[4%] z-20 inline-block bg-sky-500 text-white px-6 py-3 rounded font-semibold hover:bg-sky-600 transition"
+      >
+        Read More
+      </a>
     </div>
   );
-}
+};
+
+export default Index;
