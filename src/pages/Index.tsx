@@ -1,6 +1,6 @@
 import SocialIcons from "@/components/SocialIcons";
 import CompanyLogo from "@/components/CompanyLogo";
-import machineImage from "@/assets/machine-blue-bg.png";
+import machineImage from "@/assets/hero-machine.png";
 
 const Index = () => {
   return (
