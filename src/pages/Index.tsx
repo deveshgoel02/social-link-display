@@ -1,5 +1,4 @@
 import heroImage from "@/assets/hero-machine.png";
-import { Facebook, Linkedin, Youtube } from "lucide-react";
 
 const Index = () => {
   return (
@@ -11,36 +10,37 @@ const Index = () => {
         className="absolute inset-0 w-full h-full object-cover"
       />
       
-      {/* Clickable social icons overlay - Top Right */}
-      <div className="absolute top-6 right-8 z-20 flex items-center gap-4">
+      {/* Clickable social icons overlay - positioned over image icons */}
+      <div className="absolute top-[4%] right-[4%] z-20 flex items-center gap-6">
         <a
           href="https://facebook.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center w-10 h-10 bg-muted/50 hover:bg-muted transition-colors rounded"
+          className="w-10 h-10 cursor-pointer hover:opacity-80 transition-opacity"
           aria-label="Facebook"
-        >
-          <Facebook className="w-5 h-5 text-foreground" />
-        </a>
+        />
         <a
           href="https://linkedin.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center w-10 h-10 bg-muted/50 hover:bg-muted transition-colors rounded"
+          className="w-10 h-10 cursor-pointer hover:opacity-80 transition-opacity"
           aria-label="LinkedIn"
-        >
-          <Linkedin className="w-5 h-5 text-foreground" />
-        </a>
+        />
         <a
           href="https://youtube.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center w-10 h-10 bg-youtube hover:bg-youtube-hover transition-colors rounded"
+          className="w-16 h-10 cursor-pointer hover:opacity-80 transition-opacity"
           aria-label="YouTube"
-        >
-          <Youtube className="w-5 h-5 text-white" />
-        </a>
+        />
       </div>
+
+      {/* Clickable Read More button overlay */}
+      <a
+        href="#products"
+        className="absolute top-[52%] left-[4%] w-28 h-10 z-20 cursor-pointer hover:opacity-80 transition-opacity"
+        aria-label="Read More"
+      />
     </div>
   );
 };
