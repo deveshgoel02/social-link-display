@@ -19,15 +19,14 @@ const Index = () => {
         }}
       />
 
-      {/* Blue diagonal triangle on the left */}
+      {/* Blue diagonal triangle on the left - matching original */}
       <svg
         className="absolute inset-0 w-full h-full z-[1]"
         viewBox="0 0 100 100"
         preserveAspectRatio="none"
       >
-        {/* Diagonal from middle-left going down-right */}
         <polygon
-          points="0,30 55,0 55,100 0,100"
+          points="0,35 50,0 50,100 0,100"
           fill="hsl(207, 90%, 54%)"
         />
       </svg>
@@ -53,12 +52,12 @@ const Index = () => {
         </div>
       </div>
 
-      {/* Machine Image - Positioned right */}
-      <div className="absolute right-0 bottom-0 w-[68%] z-10 flex items-end justify-end">
+      {/* Machine Image - Positioned right, smaller to show text */}
+      <div className="absolute right-0 bottom-0 w-[55%] z-10 flex items-end justify-end">
         <img
           src={machineImage}
           alt="Paper Machinery"
-          className="w-full h-auto object-contain"
+          className="w-full h-auto object-contain max-h-[70vh]"
         />
       </div>
 
