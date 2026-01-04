@@ -1,70 +1,46 @@
-import heroImage from "@/assets/hero-machine.png";
+delete my projectdelete my projectimport heroImage from "@/assets/hero-machine.png";
 
 const Index = () => {
   return (
     <div className="h-screen w-full relative overflow-hidden">
-      {/* Background Image */}
+      {/* Full hero background image */}
       <img
         src={heroImage}
         alt="Paper Machinery Corporation - Model Machine"
         className="absolute inset-0 w-full h-full object-cover"
       />
-
-      {/* Social Icons */}
-      <div className="absolute top-[4%] right-[4%] z-20 flex items-center gap-4 bg-black/40 px-4 py-2 rounded-md">
-        {/* Facebook */}
+      
+      {/* Clickable social icons overlay - positioned over image icons */}
+      <div className="absolute top-[4%] right-[4%] z-20 flex items-center gap-6">
         <a
           href="https://facebook.com"
           target="_blank"
           rel="noopener noreferrer"
+          className="w-10 h-10 cursor-pointer hover:opacity-80 transition-opacity"
           aria-label="Facebook"
-          className="hover:scale-110 transition"
-        >
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/733/733547.png"
-            alt="Facebook"
-            className="w-6 h-6"
-          />
-        </a>
-
-        {/* LinkedIn */}
+        />
         <a
           href="https://linkedin.com"
           target="_blank"
           rel="noopener noreferrer"
+          className="w-10 h-10 cursor-pointer hover:opacity-80 transition-opacity"
           aria-label="LinkedIn"
-          className="hover:scale-110 transition"
-        >
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/733/733561.png"
-            alt="LinkedIn"
-            className="w-6 h-6"
-          />
-        </a>
-
-        {/* YouTube */}
+        />
         <a
           href="https://youtube.com"
           target="_blank"
           rel="noopener noreferrer"
+          className="w-16 h-10 cursor-pointer hover:opacity-80 transition-opacity"
           aria-label="YouTube"
-          className="hover:scale-110 transition"
-        >
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/733/733646.png"
-            alt="YouTube"
-            className="w-6 h-6"
-          />
-        </a>
+        />
       </div>
 
-      {/* Read More Button */}
+      {/* Clickable Read More button overlay */}
       <a
         href="#products"
-        className="absolute top-[52%] left-[4%] z-20 bg-sky-500 text-white px-6 py-3 rounded-md font-semibold hover:bg-sky-600 transition"
-      >
-        Read More
-      </a>
+        className="absolute top-[52%] left-[4%] w-28 h-10 z-20 cursor-pointer hover:opacity-80 transition-opacity"
+        aria-label="Read More"
+      />
     </div>
   );
 };
